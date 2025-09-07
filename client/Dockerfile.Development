@@ -1,0 +1,11 @@
+FROM node:20
+
+WORKDIR /workspaces
+
+COPY . ./client/
+
+WORKDIR /workspaces/client
+
+RUN npm install
+
+EXPOSE 5173
