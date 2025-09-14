@@ -6,6 +6,7 @@ import TheHeader from '@/components/layouts/TheHeader.vue'
 // ページ
 import HomeView from '../views/HomeView.vue'
 import PlayerList from '@/views/PlayerList.vue'
+import FormationSetting from '@/views/FormationSetting.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/playerlist',
       component: TheHeader,
       children: [{ path: '', component: PlayerList }],
+    },
+    {
+      path: '/formation',
+      component: TheHeader,
+      children: [{ path: '', component: FormationSetting }],
     },
   ],
 })
