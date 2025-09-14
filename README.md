@@ -5,3 +5,4 @@ SpaProxyが、Web API、Reactアプリへのリクエストを振り分け
 
 index.htmlがアクセスの基点です。あらかじめ用意されている<div id="root">要素に対して、Reactアプリが埋め込まれる、とだけ理解しておきましょう
 
+# HubFootball
