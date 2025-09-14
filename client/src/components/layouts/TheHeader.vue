@@ -52,20 +52,17 @@ const isSidebarOpen = ref(true)
   width: 250px;
   background-color: #e9f5e9;
   transition:
-    width 0.3s ease,
-    transform 0.3s ease;
+  width 0.3s ease,
+  transform 0.3s ease;
   position: relative;
-  padding: 3rem 1rem 1rem 1rem;
 
   &.closed {
-    width: 50px;
+    width: 60px;
   }
 }
 
 .collapse-btn {
   position: absolute;
-  top: 1rem;
-  left: 10px;
   background-color: #28a745;
   color: #fff;
   border: none;
@@ -74,9 +71,11 @@ const isSidebarOpen = ref(true)
   height: 30px;
   font-size: 1.2rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
-  &.hover {
-    background-color: #198754;
+  &:hover {
+  background-color: #198754;
   }
 }
 

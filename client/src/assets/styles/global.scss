@@ -1,0 +1,84 @@
+/* global.scss */
+
+/* フォント・色・汎用スタイル */
+.fw-bold {
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+/* ページヘッダー */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-icon {
+  padding: 0.5rem 1rem;
+  width: 64px;
+  height: 64px;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-left: 4px solid #28a745;
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* 検索エリア */
+.search-area {
+  background-color: #e9f5e9;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  min-height: 150px;
+  border-radius: 0 0 8px 8px;
+}
+
+.search-header {
+  background-color: #28a745;
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 8px 8px 0 0;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.search-input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  min-width: 300px;
+}
+
+/* テーブル */
+table.table {
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 8px;
+    font-weight: 700;
+  }
+
+  th,
+  td {
+    text-align: center;
+  }
+}
+
+.table-wrapper {
+  margin: 1rem 0;
+}

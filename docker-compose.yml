@@ -1,24 +1,53 @@
 services:
+  # PostgreSQLデータベース
+  postgres:
+    image: postgres:15
+    # container_name: postgres-dev
+    environment:
+      POSTGRES_DB: hubfootball
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # networks:
+      # - hubfootball-network
+
   #.NET開発環境
   dotnet-dev:
     build:
       context: ./server
       dockerfile: Dockerfile.Development
-    container_name: dotnet-dev
+    # container_name: dotnet-dev
     volumes:
     - ./server:/workspaces/server
     tty: true
     ports:
-    - "50010:8080"
+    # - "50010:8080"
+    - 5113:5113
+    depends_on:
+      - postgres
+    # networks:
+      # - hubfootball-network
 
   #Vue開発環境
   vue-dev:
     build:
       context: ./client
       dockerfile: Dockerfile.Development
-    container_name: vue-dev
+    # container_name: vue-dev
     volumes:
       - ./client:/workspaces/client
     tty: true
     ports:
       - "5173:5173"
+    # networks:
+      # - hubfootball-network
+
+volumes:
+  postgres_data:
+
+# networks:
+#   hubfootball-network:
+#     driver: bridge

@@ -7,4 +7,8 @@ WORKDIR /workspaces/server
 
 RUN dotnet restore
 
+RUN export PATH="$PATH:/root/.dotnet/tools"
+
+ENV DOTNET_ENVIRONMENT=Development
+
 CMD ["/bin/bash"]
